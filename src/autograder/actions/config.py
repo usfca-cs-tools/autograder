@@ -85,7 +85,7 @@ class Config:
                 if p.exists():
                     found = True
                 else:
-                    if dirname == Path.home():
+                    if dirname == Path.home() or dirname == dirname.parent:
                         break
                     dirname = dirname.parent
             if not found:
